@@ -1,0 +1,223 @@
+extends ../core/ui/layout/templates/map.pug
+
+
+block title
+  | Карта проекта
+
+
+
+
+block beforeWorkarea
+  a(href="https://spiks.tech/" target="blank" rel="nofollow").logo
+    h1 Marketplace
+  .search-box 
+    img(src="assets/media/search.svg")
+    input(placeholder="Search for a product, flower, etc")
+    
+
+  ul.checkboxes
+      li.checkboxes__block.border 
+        input(type="checkbox", name="Buds", id="www", value="1")
+        span
+          img(src="assets/media/leaf_btns.svg")
+          p Buds
+
+      li.checkboxes__block.border 
+        input(type="checkbox", name="Edible", id="www", value="1")
+        span
+         img(src="assets/media/leaf_btns.svg")
+         p Edible
+
+      li.checkboxes__block.border 
+        input(type="checkbox", name="Non Edible", id="www", value="1")
+        span
+         img(src="assets/media/leaf_btns.svg")
+         p Non Edible
+
+      li.checkboxes__block.border 
+        input(type="checkbox", name="Concentrate", id="www", value="1")
+        span
+         img(src="assets/media/leaf_btns.svg")
+         p Concentrate
+
+
+block workarea
+ .filters
+  .sliders
+   .sliders__box
+    p Price Range
+    #price-slider
+    .sliders__values
+     #price-slider-value-lower.value-box
+     #price-slider-value-upper.value-box
+ 
+   .sliders__box
+    p THC, %
+    #thc-slider
+    .sliders__values
+     #thc-slider-value-lower.value-box
+     #thc-slider-value-upper.value-box
+
+   .sliders__box
+    p CBD, %
+    #cbd-slider
+    .sliders__values
+     #cbd-slider-value-lower.value-box
+     #cbd-slider-value-upper.value-box
+
+  button.filter-btn.border
+   img(src="assets/media/filter_icon.svg")
+   .sorting
+     p.sorting__title Sort by: 
+     ul.sorting__list
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/calendar.svg").main-img
+       p Date (New first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/calendar.svg").main-img
+       p Date (Old first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/arrow.svg").main-img
+       p Price (High first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/arrow.svg").main-img
+       p Price (Low first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/thc.svg").main-img
+       p Total THC (High first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/thc.svg").main-img
+       p Total THC (Low first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/cbd.svg").main-img
+       p Total CBD (High first)
+
+      li
+       div.sorting-box
+        img(src="assets/media/sort-icons/cbd.svg").main-img
+       p Total CBD (Low first)
+
+
+
+
+
+ .results 
+  p 1034,5 Results
+  ul.results__list
+  //-  li
+  //-   span 100% Indica
+  //-   button 
+  //-    img(src="assets/media/close_btn.svg", alt="close-icon")
+  //-  li
+  //-   span >50% Indica
+  //-   button 
+  //-    img(src="assets/media/close_btn.svg", alt="close-icon")
+ 
+
+ aside.layout__sidebar.border
+  ul.sidebar__items 
+   li.accordeon
+    a()
+     p Classification
+     img(src="assets/media/sidebar__arrow.svg", alt="arrow-icon")
+    ul.checkboxes 
+     li.checkboxes__block
+      input(type="checkbox", name="100% Indica", id="wwws", value="1")
+      span
+      p 100% Indica
+     li.checkboxes__block
+      input(type="checkbox", name="100% Sativa", id="www", value="1")
+      span
+      p 100% Sativa
+     li.checkboxes__block
+      input(type="checkbox", name=">50% Indica", id="www", value="1")
+      span
+      p >50% Indica
+     li.checkboxes__block
+      input(type="checkbox", name=">50% Sativa", id="www", value="1")
+      span
+      p >50% Sativa
+
+   li.accordeon
+    a()
+     p Production Method
+     img(src="assets/media/sidebar__arrow.svg", alt="arrow-icon")
+    ul.checkboxes 
+     li.checkboxes__block
+      input(type="checkbox", name="Indoor", id="www", value="1")
+      span
+      p Indoor
+     li.checkboxes__block
+      input(type="checkbox", name="Outdoor", id="www", value="1")
+      span
+      p Outdoor
+     li.checkboxes__block
+      input(type="checkbox", name="Greenhouse", id="www", value="1")
+      span
+      p Greenhouse
+     li.checkboxes__block
+      input(type="checkbox", name="Light Deprivation", id="www", value="1")
+      span
+      p Light Deprivation
+     li.checkboxes__block
+      input(type="checkbox", name="Mixed Light", id="www", value="1")
+      span
+      p Mixed Light
+     li.checkboxes__block
+      input(type="checkbox", name="Other", id="www", value="1")
+      span
+      p Other
+
+
+
+
+   li.accordeon
+    a()
+     p Production Method
+     img(src="assets/media/sidebar__arrow.svg", alt="arrow-icon")
+    ul.checkboxes 
+     li.checkboxes__block
+      input(type="checkbox", name="100% Indica", id="www", value="1")
+      span
+      p 100% Indica
+     li.checkboxes__block
+      input(type="checkbox", name="100% Sativa", id="www", value="1")
+      span
+      p 100% Sativa
+     li.checkboxes__block
+      input(type="checkbox", name=">50% Indica", id="www", value="1")
+      span
+      p >50% Indica
+     li.checkboxes__block
+      input(type="checkbox", name=">50% Sativa", id="www", value="1")
+      span
+      p >50% Sativa
+   
+  
+
+
+
+
+
+block afterWorkarea
+
+
+
+
+
+
+
+
