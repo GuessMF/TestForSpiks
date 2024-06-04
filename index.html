@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.2/nouislider.min.css" rel="stylesheet">
+  <title>Карта проекта
+  </title>
+  <body class="layout">
+    <header class="layout__header">
+      <div class="container"><a class="logo" href="https://spiks.tech/" target="blank" rel="nofollow">
+          <h1>Marketplace</h1></a>
+        <div class="search-box"> <img src="assets/media/search.svg">
+          <input placeholder="Search for a product, flower, etc">
+        </div>
+        <ul class="checkboxes">
+          <li class="checkboxes__block border"> 
+            <input type="checkbox" name="Buds" id="www" value="1"><span><img src="assets/media/leaf_btns.svg">
+              <p>Buds</p></span>
+          </li>
+          <li class="checkboxes__block border"> 
+            <input type="checkbox" name="Edible" id="www" value="1"><span><img src="assets/media/leaf_btns.svg">
+              <p>Edible</p></span>
+          </li>
+          <li class="checkboxes__block border"> 
+            <input type="checkbox" name="Non Edible" id="www" value="1"><span><img src="assets/media/leaf_btns.svg">
+              <p>Non Edible</p></span>
+          </li>
+          <li class="checkboxes__block border"> 
+            <input type="checkbox" name="Concentrate" id="www" value="1"><span><img src="assets/media/leaf_btns.svg">
+              <p>Concentrate</p></span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="layout__main">
+      <div class="container">
+        <div class="filters">
+          <div class="sliders">
+            <div class="sliders__box">
+              <p>Price Range</p>
+              <div id="price-slider"></div>
+              <div class="sliders__values">
+                <div class="value-box" id="price-slider-value-lower"></div>
+                <div class="value-box" id="price-slider-value-upper"></div>
+              </div>
+            </div>
+            <div class="sliders__box">
+              <p>THC, %</p>
+              <div id="thc-slider"></div>
+              <div class="sliders__values">
+                <div class="value-box" id="thc-slider-value-lower"></div>
+                <div class="value-box" id="thc-slider-value-upper"></div>
+              </div>
+            </div>
+            <div class="sliders__box">
+              <p>CBD, %</p>
+              <div id="cbd-slider"></div>
+              <div class="sliders__values">
+                <div class="value-box" id="cbd-slider-value-lower"></div>
+                <div class="value-box" id="cbd-slider-value-upper"></div>
+              </div>
+            </div>
+          </div>
+          <button class="filter-btn border"><img src="assets/media/filter_icon.svg">
+            <div class="sorting">
+              <p class="sorting__title">Sort by: </p>
+              <ul class="sorting__list">
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/calendar.svg"></div>
+                  <p>Date (New first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/calendar.svg"></div>
+                  <p>Date (Old first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/arrow.svg"></div>
+                  <p>Price (High first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/arrow.svg"></div>
+                  <p>Price (Low first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/thc.svg"></div>
+                  <p>Total THC (High first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/thc.svg"></div>
+                  <p>Total THC (Low first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/cbd.svg"></div>
+                  <p>Total CBD (High first)</p>
+                </li>
+                <li>
+                  <div class="sorting-box"><img class="main-img" src="assets/media/sort-icons/cbd.svg"></div>
+                  <p>Total CBD (Low first)</p>
+                </li>
+              </ul>
+            </div>
+          </button>
+        </div>
+        <div class="results"> 
+          <p>1034,5 Results</p>
+          <ul class="results__list"></ul>
+        </div>
+        <aside class="layout__sidebar border">
+          <ul class="sidebar__items"> 
+            <li class="accordeon"><a>
+                <p>Classification</p><img src="assets/media/sidebar__arrow.svg" alt="arrow-icon"></a>
+              <ul class="checkboxes"> 
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="100% Indica" id="wwws" value="1"><span></span>
+                  <p>100% Indica</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="100% Sativa" id="www" value="1"><span></span>
+                  <p>100% Sativa</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="&gt;50% Indica" id="www" value="1"><span></span>
+                  <p>>50% Indica</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="&gt;50% Sativa" id="www" value="1"><span></span>
+                  <p>>50% Sativa</p>
+                </li>
+              </ul>
+            </li>
+            <li class="accordeon"><a>
+                <p>Production Method</p><img src="assets/media/sidebar__arrow.svg" alt="arrow-icon"></a>
+              <ul class="checkboxes"> 
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="Indoor" id="www" value="1"><span></span>
+                  <p>Indoor</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="Outdoor" id="www" value="1"><span></span>
+                  <p>Outdoor</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="Greenhouse" id="www" value="1"><span></span>
+                  <p>Greenhouse</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="Light Deprivation" id="www" value="1"><span></span>
+                  <p>Light Deprivation</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="Mixed Light" id="www" value="1"><span></span>
+                  <p>Mixed Light</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="Other" id="www" value="1"><span></span>
+                  <p>Other</p>
+                </li>
+              </ul>
+            </li>
+            <li class="accordeon"><a>
+                <p>Production Method</p><img src="assets/media/sidebar__arrow.svg" alt="arrow-icon"></a>
+              <ul class="checkboxes"> 
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="100% Indica" id="www" value="1"><span></span>
+                  <p>100% Indica</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="100% Sativa" id="www" value="1"><span></span>
+                  <p>100% Sativa</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="&gt;50% Indica" id="www" value="1"><span></span>
+                  <p>>50% Indica</p>
+                </li>
+                <li class="checkboxes__block">
+                  <input type="checkbox" name="&gt;50% Sativa" id="www" value="1"><span></span>
+                  <p>>50% Sativa</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <footer class="layout__footer">
+    </footer>
+    <script src="js/index.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.2/nouislider.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"> </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var priceSlider = document.getElementById('price-slider');
+          var thcSlider = document.getElementById('thc-slider');
+          var cbdSlider = document.getElementById('cbd-slider');
+          noUiSlider.create(priceSlider, {
+            start: [0, 234],
+            connect: true,
+            range: {
+                min: 0,
+                max: 999,
+            },
+            tooltips: [false, wNumb({ decimals: 0, suffix: ' $' })]
+          });
+          var priceSliderValues = [
+           document.getElementById('price-slider-value-lower'),
+           document.getElementById('price-slider-value-upper')
+        ];
+          priceSlider.noUiSlider.on('update', function (values, handle) {
+          priceSliderValues[handle].innerHTML = `${Math.round(values[handle])} $`;
+      
+          });
+      
+            noUiSlider.create(thcSlider, {
+            start: [0, 14],
+            connect: true,
+            range: {
+                min: 0,
+                max: 99,
+            },
+            tooltips: [false, wNumb({ decimals: 0, suffix: ' %' })]
+          });
+              var thcSliderValues = [
+              document.getElementById('thc-slider-value-lower'),
+               document.getElementById('thc-slider-value-upper')
+               ];
+              thcSlider.noUiSlider.on('update', function (values, handle) {
+          thcSliderValues[handle].innerHTML = `${Math.round(values[handle])} %`;
+      
+          });
+      
+            noUiSlider.create(cbdSlider, {
+            start: [0, 34],
+            connect: true,
+            range: {
+                min: 0,
+                max: 99,
+            },
+            tooltips: [false, wNumb({ decimals: 0, suffix: ' %' })]
+          });
+              var cbdSliderValues = [
+              document.getElementById('cbd-slider-value-lower'),
+               document.getElementById('cbd-slider-value-upper')
+               ];
+              cbdSlider.noUiSlider.on('update', function (values, handle) {
+          cbdSliderValues[handle].innerHTML = `${Math.round(values[handle])} %`;
+      
+          });
+      
+      
+      
+      
+        });
+      
+      
+          
+    </script>
+  </body>
+</html>
