@@ -143,7 +143,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
             newItem.appendChild(span);
             var button = document.createElement("button");
             var img = document.createElement("img");
-            img.src = "assets/media/close_btn.svg";
+            img.src = "./assets/media/images/close_btn.svg";
             img.alt = "close-icon";
             button.appendChild(img);
             newItem.appendChild(button);

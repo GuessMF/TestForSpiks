@@ -714,7 +714,7 @@ img {
 
 .layout__sidebar .checkboxes__block input:checked + span::before {
   content: "";
-  background-image: url("../../assets/media/checked_icon.svg");
+  background-image: url("./assets/media/images/checked_icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
