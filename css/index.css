@@ -640,7 +640,7 @@ img {
   border-radius: 10px;
   padding: 15px 22px 30px 17px;
   position: relative;
-  background-image: url("../../assets/media/images/background_leaf.webp");
+  background-image: url("./assets/media/images/background_leaf.webp");
   background-position: left;
   background-repeat: no-repeat;
   background-size: inherit;
